@@ -1,0 +1,26 @@
+<div class="container">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb mt-5">
+      <li class="breadcrumb-item"><a routerLink="/home">Home Page</a></li>
+    </ol>
+  </nav>
+  <h2 class="mt-5">Filtered posts by: get</h2>
+  <ng-container *ngFor="let post of sortByDate ">
+    <div *ngIf="post.title.toLowerCase().includes(searchedText) || post.description.toLowerCase().includes(searchedText)" (click)="showMore(post.id)">
+      <div  class="categoryPosts mt-3 shadow-sm">
+        <div style="margin-left: 20px;">
+          <h2 class="postTitle">{{post.title}}</h2>
+            <p>{{(post.description.length > 280) ? (post.description | slice:0:280)+'...': (post.description ) }} <span class="readMore">read more</span></p>
+        </div>
+        <div class="post">
+          <img src="assets/images/profile.png" class="profileImg">
+          <div class="categoryContent">
+            <p style="margin-bottom: 0px;"> Written by <b>{{post.author}}</b></p>
+            <p style="margin-bottom: 0px;">{{post.date | date: 'MMMM d, y'}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    </ng-container>
+</div>
+

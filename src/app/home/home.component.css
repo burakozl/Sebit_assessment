@@ -1,0 +1,13 @@
+.card{
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  height: 150px;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+}
+.cardContent{
+  margin-left: 30px;
+
+}

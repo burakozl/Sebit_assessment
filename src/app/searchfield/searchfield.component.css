@@ -1,0 +1,27 @@
+.categoryPosts{
+  background-color: white;
+  padding: 15px;
+}
+.postTitle{
+  color: #7961C9;
+  cursor: pointer;
+}
+.readMore{
+  background-color: #7961C9;
+  color:white;
+  padding: 2px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.post{
+  display: flex;
+  align-items: center;
+}
+.categoryContent{
+  margin-left: 20px;
+}
+.profileImg{
+  width: 30px;
+  border-radius: 50%;
+  margin-left: 10px;
+}

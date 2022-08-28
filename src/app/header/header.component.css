@@ -1,0 +1,18 @@
+::ng-deep mat-toolbar{
+  justify-content: center;
+  flex-direction: column;
+
+}
+mat-toolbar{
+  flex-direction: column;
+  background-color: #583ABC;
+  color: white;
+  padding-top: 10px;
+}
+span{
+  font-size:35px;
+  margin-bottom: 20px;
+}
+.mat-toolbar-row, .mat-toolbar-single-row {
+  height: auto;
+}

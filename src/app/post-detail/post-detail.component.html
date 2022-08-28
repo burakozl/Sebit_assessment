@@ -1,0 +1,27 @@
+<app-search (searchTextChanged)="onSearchTextEntered($event)"></app-search>
+<ng-container *ngIf="searchText !== ''">
+  <app-searchfield [searchedText]="searchText"></app-searchfield>
+</ng-container>
+<div class="container p-4" *ngIf="searchText === ''">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a routerLink="/home">Home Page</a></li>
+    </ol>
+  </nav>
+  <div class="categoryPosts mt-3">
+    <div style="margin-left: 20px;">
+      <h2>{{post.title}}</h2>
+      <p>{{post.description}}</p>
+    </div>
+    <div class="post mt-5">
+      <div class="categoryContent">
+        <p class="author">{{post.author}}</p>
+        <p class="date">{{post.date | date: 'd MMMM y'}}</p>
+      </div>
+    </div>
+    <div class="tags">
+      <p style="margin: 0px;">Tags : &nbsp; </p>
+      <span class="tag" *ngFor="let tag of tags">{{tag}}</span>
+    </div>
+  </div>
+</div>
